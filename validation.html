@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <p id="a">LOG IN FOR MORE DETIALS!</p>
+    <fieldset>
+        <p>Enter your name</p>
+    <input id="name" type="text" placeholder="Enter your name"></input>
+    <br><br>
+    <p>Enter your age</p>
+    <input id="num" type="number" min="18" max="100" required placeholder="Age"></input>
+    <br><br>
+    <button onclick="validation()">submit</button>
+    <p id="a"></p>
+    <script>
+     function validation(){
+        var i=document.getElementById("num")
+        if(!i.checkValidity()){
+            document.getElementById("a").innerHTML=i.validationMessage
+        }
+        else{
+            document.getElementById("a").innerHTML="INPUT IS OK"
+        }
+    }
+    </script>
+    </fieldset>
+</body>
+</html>
